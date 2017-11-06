@@ -8,6 +8,9 @@
     "test": "npm run lint && npm run unit",
     "unit": "jest"
   },
+  "bin": {
+    "google-drive-cleaner": "./bin/google-drive-cleaner.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abetomo/google-drive-cleaner.git"
