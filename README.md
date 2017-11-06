@@ -33,8 +33,8 @@ Add `--no-dryrun` option.
 ```
 % google-drive-cleaner \
 -a AUTH_JSON_FILE_PATH \
--q "'GMAIL_ADDRESS' in owners and name contains '.xlsx' \
---no-dryrun"
+-q "'GMAIL_ADDRESS' in owners and name contains '.xlsx'" \
+--no-dryrun
 ```
 
 By adding the `--no-dryrun` option, the files on the drive are deleted.
