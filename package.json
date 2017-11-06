@@ -4,7 +4,9 @@
   "description": "A tool to remove files on Google Drive.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/abetomo/google-drive-cleaner/issues"
   },
-  "homepage": "https://github.com/abetomo/google-drive-cleaner#readme"
+  "homepage": "https://github.com/abetomo/google-drive-cleaner#readme",
+  "dependencies": {
+    "googleapis": "^22.2.0"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "standard": "^10.0.3"
+  }
 }
