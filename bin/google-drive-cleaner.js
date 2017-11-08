@@ -22,7 +22,17 @@ if (!fs.existsSync(program.auth)) {
   process.exit(254)
 }
 
-(new GoogleDriveCleaner(program.auth)).clean({
+const googleDriveCleaner = new GoogleDriveCleaner(program.auth)
+
+googleDriveCleaner.clean({
   query: program.query,
   dryrun: program.dryrun
+}).then(() => {
+  return googleDriveCleaner.storageSpaceUsage()
+}).then(storageSpaceUsage => {
+  const separator = Array(33).join('=')
+  console.log(`
+${separator}
+ Current Storage Usage: ${Math.round(storageSpaceUsage * 10000) / 100}%
+${separator}`)
 })
