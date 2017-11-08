@@ -54,7 +54,7 @@ driveObject.about = {
     callback(null, {
       storageQuota: {
         limit: '10',
-        usage: '3',
+        usage: '4',
         usageInDrive: '3',
         usageInDriveTrash: '1'
       }
