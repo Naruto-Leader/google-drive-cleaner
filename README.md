@@ -1,4 +1,7 @@
 # google-drive-cleaner
+
+[![npm version](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner.svg)](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner)
+
 A tool to remove files on Google Drive.
 
 ## install
