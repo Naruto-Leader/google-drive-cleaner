@@ -28,11 +28,16 @@ googleDriveCleaner.clean({
   query: program.query,
   dryrun: program.dryrun
 }).then(() => {
-  return googleDriveCleaner.storageSpaceUsage()
-}).then(storageSpaceUsage => {
+  return googleDriveCleaner.storageQuota()
+}).then(storageQuota => {
+  const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
+  const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
+  const storageSpaceUsage = storageQuota.usage / storageQuota.limit
   const separator = Array(33).join('=')
   console.log(`
 ${separator}
- Current Storage Usage: ${Math.round(storageSpaceUsage * 10000) / 100}%
+ Current Storage Usage:
+ ${usage} / ${limit}\
+ (${Math.round(storageSpaceUsage * 10000) / 100}%)
 ${separator}`)
 })
