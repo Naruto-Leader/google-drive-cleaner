@@ -35,6 +35,15 @@
     "jest": "^21.2.1",
     "standard": "^10.0.3"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "__mocks__",
+    "bin",
+    "index.js",
+    "lib",
+    "package.json"
+  ],
   "publishConfig": {
     "access": "public"
   }
