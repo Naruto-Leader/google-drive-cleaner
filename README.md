@@ -1,6 +1,9 @@
 # google-drive-cleaner
 
 [![npm version](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner.svg)](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner)
+[![Build Status](https://travis-ci.org/abetomo/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/abetomo/google-drive-cleaner)
+[![Build status](https://ci.appveyor.com/api/projects/status/2x7j97fpj73261d5/branch/master?svg=true)](https://ci.appveyor.com/project/abetomo/google-drive-cleaner/branch/master)
+
 
 A tool to remove files on Google Drive.
 
