@@ -5,6 +5,8 @@
 const fs = require('fs')
 const program = require('commander')
 const GoogleDriveCleaner = require('..')
+const separator =
+  require('full-width-of-terminal').getStringFullWidthOfTerminal
 
 program
   .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
@@ -33,11 +35,10 @@ googleDriveCleaner.clean({
   const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
   const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
   const storageSpaceUsage = storageQuota.usage / storageQuota.limit
-  const separator = Array(33).join('=')
   console.log(`
-${separator}
+${separator('=')}
  Current Storage Usage:
  ${usage} / ${limit}\
  (${Math.round(storageSpaceUsage * 10000) / 100}%)
-${separator}`)
+${separator('=')}`)
 })
