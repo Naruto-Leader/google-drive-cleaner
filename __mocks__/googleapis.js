@@ -19,7 +19,7 @@ class JWT {
     }
   }
 }
-googleapis.google.auth = {JWT: JWT}
+googleapis.google.auth = { JWT: JWT }
 
 // drive
 const driveObject = {
@@ -28,7 +28,7 @@ const driveObject = {
 }
 driveObject.files = {
   list (_, callback) {
-    callback(null, {data: {
+    callback(null, { data: {
       kind: 'drive#fileList',
       incompleteSearch: false,
       files: [{
@@ -42,7 +42,7 @@ driveObject.files = {
         name: 'test-name2',
         mimeType: 'test-mimeType2'
       }]
-    }})
+    } })
   },
 
   delete (_, callback) {
@@ -51,14 +51,14 @@ driveObject.files = {
 }
 driveObject.about = {
   get (_, callback) {
-    callback(null, {data: {
+    callback(null, { data: {
       storageQuota: {
         limit: '10',
         usage: '4',
         usageInDrive: '3',
         usageInDriveTrash: '1'
       }
-    }})
+    } })
   }
 }
 googleapis.google.drive = () => driveObject
