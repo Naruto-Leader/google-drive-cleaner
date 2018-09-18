@@ -41,4 +41,10 @@ ${separator('=')}
  ${usage} / ${limit}\
  (${Math.round(storageSpaceUsage * 10000) / 100}%)
 ${separator('=')}`)
+}).catch((e) => {
+  const errorMessage = (() => {
+    if (e.errors != null) return e.errors
+    return e.message
+  })()
+  console.error(errorMessage)
 })
