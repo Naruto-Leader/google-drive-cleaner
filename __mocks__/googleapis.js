@@ -28,6 +28,9 @@ const driveObject = {
 }
 driveObject.files = {
   list (_, callback) {
+    if (_.q === '__failed_test__') {
+      callback(new Error('files failed test'))
+    }
     callback(null, { data: {
       kind: 'drive#fileList',
       incompleteSearch: false,
@@ -46,6 +49,9 @@ driveObject.files = {
   },
 
   delete (_, callback) {
+    if (_.fileId === '__failed_test__') {
+      callback(new Error('delete failed test'))
+    }
     callback(null)
   }
 }
