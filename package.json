@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "full-width-of-terminal": "^1.1.1",
-    "googleapis": "^39.2.0"
+    "googleapis": "^40.0.0"
   },
   "devDependencies": {
     "jest": "^24.7.1",
@@ -52,6 +52,6 @@
     "collectCoverage": true
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 8.0.0"
   }
 }
