@@ -30,11 +30,11 @@
   "dependencies": {
     "commander": "^2.20.0",
     "full-width-of-terminal": "^1.1.1",
-    "googleapis": "^40.0.0"
+    "googleapis": "^41.0.1"
   },
   "devDependencies": {
-    "jest": "^24.7.1",
-    "standard": "^12.0.1"
+    "jest": "^24.8.0",
+    "standard": "^13.1.0"
   },
   "files": [
     "LICENSE",
