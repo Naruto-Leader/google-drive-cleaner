@@ -1,9 +1,6 @@
 # google-drive-cleaner
 
 [![npm version](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner.svg)](https://badge.fury.io/js/%40abetomo%2Fgoogle-drive-cleaner)
-[![Build Status](https://travis-ci.org/abetomo/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/abetomo/google-drive-cleaner)
-[![Build status](https://ci.appveyor.com/api/projects/status/2x7j97fpj73261d5/branch/master?svg=true)](https://ci.appveyor.com/project/abetomo/google-drive-cleaner/branch/master)
-
 
 A tool to remove files on Google Drive.
 
@@ -27,7 +24,6 @@ Because it is dryrun, the file to be deleted is only displayed.
 
 ### query
 See [Search for Files and Team Drives](https://developers.google.com/drive/v3/web/search-parameters) for queries specified with `-q`.
-
 
 ## delete
 Add `--no-dryrun` option.
