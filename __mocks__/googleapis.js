@@ -31,21 +31,23 @@ driveObject.files = {
     if (_.q === '__failed_test__') {
       callback(new Error('files failed test'))
     }
-    callback(null, { data: {
-      kind: 'drive#fileList',
-      incompleteSearch: false,
-      files: [{
-        kind: 'drive#file',
-        id: 'test-id1',
-        name: 'test-name1',
-        mimeType: 'test-mimeType1'
-      }, {
-        kind: 'drive#file',
-        id: 'test-id2',
-        name: 'test-name2',
-        mimeType: 'test-mimeType2'
-      }]
-    } })
+    callback(null, {
+      data: {
+        kind: 'drive#fileList',
+        incompleteSearch: false,
+        files: [{
+          kind: 'drive#file',
+          id: 'test-id1',
+          name: 'test-name1',
+          mimeType: 'test-mimeType1'
+        }, {
+          kind: 'drive#file',
+          id: 'test-id2',
+          name: 'test-name2',
+          mimeType: 'test-mimeType2'
+        }]
+      }
+    })
   },
 
   delete (_, callback) {
@@ -57,14 +59,16 @@ driveObject.files = {
 }
 driveObject.about = {
   get (_, callback) {
-    callback(null, { data: {
-      storageQuota: {
-        limit: '10',
-        usage: '4',
-        usageInDrive: '3',
-        usageInDriveTrash: '1'
+    callback(null, {
+      data: {
+        storageQuota: {
+          limit: '10',
+          usage: '4',
+          usageInDrive: '3',
+          usageInDriveTrash: '1'
+        }
       }
-    } })
+    })
   }
 }
 googleapis.google.drive = () => driveObject
