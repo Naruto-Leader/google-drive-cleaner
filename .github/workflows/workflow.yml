@@ -12,14 +12,12 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install and test
       run: |
         npm install
-        npm run build --if-present
         npm test
 
   publish:
@@ -28,7 +26,7 @@ jobs:
     needs: [test]
     steps:
     - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@master
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
