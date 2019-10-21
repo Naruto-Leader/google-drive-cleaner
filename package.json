@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^3.0.1",
     "full-width-of-terminal": "^1.1.2",
-    "googleapis": "^43.0.0"
+    "googleapis": "^44.0.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",
