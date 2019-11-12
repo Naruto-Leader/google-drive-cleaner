@@ -5,12 +5,14 @@
 A tool to remove files on Google Drive.
 
 ## install
+
 ```
 % npm install @abetomo/google-drive-cleaner
 ```
 
 ## dryrun
 ### example
+
 * Owner is `GMAIL_ADDRESS`
 * File name contains `.xlsx`
 
@@ -23,12 +25,15 @@ A tool to remove files on Google Drive.
 Because it is dryrun, the file to be deleted is only displayed.
 
 ### query
+
 See [Search for Files and Team Drives](https://developers.google.com/drive/v3/web/search-parameters) for queries specified with `-q`.
 
 ## delete
+
 Add `--no-dryrun` option.
 
 ### example
+
 * Owner is `GMAIL_ADDRESS`
 * File name contains `.xlsx`
 
@@ -42,6 +47,7 @@ Add `--no-dryrun` option.
 By adding the `--no-dryrun` option, the files on the drive are deleted.
 
 ## Usage example of Node.js API
+
 ```javascript
 'use strict'
 
@@ -52,3 +58,7 @@ googleDriveCleaner.clean({
   dryrun: true
 })
 ```
+
+## `AUTH_JSON_FILE_PATH`
+
+Use GCP service account credentials. You first need to create a service account, download its json key.
