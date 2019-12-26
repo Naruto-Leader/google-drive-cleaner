@@ -1,10 +1,9 @@
 name: Node CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
-    name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -15,10 +14,8 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install and test
-      run: |
-        npm install
-        npm test
+    - run: npm ci
+    - run: npm test
 
   publish:
     name: npm publish
