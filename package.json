@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/abetomo/google-drive-cleaner#readme",
   "dependencies": {
-    "commander": "^5.0.0",
+    "commander": "^5.1.0",
     "full-width-of-terminal": "^1.1.2",
-    "googleapis": "^48.0.0"
+    "googleapis": "^51.0.0"
   },
   "devDependencies": {
-    "jest": "^25.2.4",
-    "standard": "^14.3.3"
+    "jest": "^26.0.1",
+    "standard": "^14.3.4"
   },
   "files": [
     "LICENSE",
