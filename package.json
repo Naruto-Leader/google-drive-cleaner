@@ -1,6 +1,6 @@
 {
   "name": "@abetomo/google-drive-cleaner",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A tool to remove files on Google Drive.",
   "main": "index.js",
   "scripts": {
