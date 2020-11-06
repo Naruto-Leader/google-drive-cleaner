@@ -9,7 +9,7 @@
     "unit": "jest"
   },
   "bin": {
-    "google-drive-cleaner": "./bin/google-drive-cleaner.js"
+    "google-drive-cleaner": "bin/google-drive-cleaner.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^6.0.0",
     "full-width-of-terminal": "^1.1.2",
-    "googleapis": "^61.0.0"
+    "googleapis": "^64.0.0"
   },
   "devDependencies": {
     "jest": "^26.4.0",
