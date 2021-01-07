@@ -1,6 +1,6 @@
 {
   "name": "@abetomo/google-drive-cleaner",
-  "version": "1.0.12",
+  "version": "2.0.0",
   "description": "A tool to remove files on Google Drive.",
   "main": "index.js",
   "scripts": {
@@ -22,14 +22,14 @@
     "cleaner"
   ],
   "author": "abetomo",
-  "license": " LGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/abetomo/google-drive-cleaner/issues"
   },
   "homepage": "https://github.com/abetomo/google-drive-cleaner#readme",
   "dependencies": {
     "commander": "^6.0.0",
-    "full-width-of-terminal": "^1.1.2",
+    "full-width-of-terminal": "^2.0.0",
     "googleapis": "^66.0.0"
   },
   "devDependencies": {
