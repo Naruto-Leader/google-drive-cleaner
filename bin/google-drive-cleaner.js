@@ -3,7 +3,7 @@
 'use strict'
 
 const fs = require('fs')
-const program = require('commander')
+const { program } = require('commander')
 const GoogleDriveCleaner = require('..')
 const separator =
   require('full-width-of-terminal').getStringFullWidthOfTerminal
@@ -19,16 +19,17 @@ if (!process.argv.slice(2).length) {
   process.exit(255)
 }
 
-if (!fs.existsSync(program.auth)) {
+const opts = program.opts()
+if (!fs.existsSync(opts.auth)) {
   program.outputHelp()
   process.exit(254)
 }
 
-const googleDriveCleaner = new GoogleDriveCleaner(program.auth)
+const googleDriveCleaner = new GoogleDriveCleaner(opts.auth)
 
 googleDriveCleaner.clean({
-  query: program.query,
-  dryrun: program.dryrun
+  query: opts.query,
+  dryrun: opts.dryrun
 }).then(() => {
   return googleDriveCleaner.storageQuota()
 }).then(storageQuota => {
