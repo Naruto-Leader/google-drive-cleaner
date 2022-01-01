@@ -28,25 +28,28 @@ if (!fs.existsSync(opts.auth)) {
 
 const googleDriveCleaner = new GoogleDriveCleaner(opts.auth)
 
-googleDriveCleaner.clean({
-  query: opts.query,
-  dryrun: opts.dryrun
-}).then(() => {
-  return googleDriveCleaner.storageQuota()
-}).then(storageQuota => {
-  const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
-  const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
-  const storageSpaceUsage = storageQuota.usage / storageQuota.limit
-  console.log(`
+;(async () => {
+  try {
+    await googleDriveCleaner.clean({
+      query: opts.query,
+      dryrun: opts.dryrun
+    })
+
+    const storageQuota = await googleDriveCleaner.storageQuota()
+    const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
+    const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
+    const storageSpaceUsage = storageQuota.usage / storageQuota.limit
+    console.log(`
 ${separator('=')}
  Current Storage Usage:
  ${usage} / ${limit}\
  (${Math.round(storageSpaceUsage * 10000) / 100}%)
 ${separator('=')}`)
-}).catch((e) => {
-  const errorMessage = (() => {
-    if (e.errors != null) return e.errors
-    return e.message
-  })()
-  console.error(errorMessage)
-})
+  } catch (e) {
+    const errorMessage = (() => {
+      if (e.errors != null) return e.errors
+      return e.message
+    })()
+    console.error(errorMessage)
+  }
+})()
