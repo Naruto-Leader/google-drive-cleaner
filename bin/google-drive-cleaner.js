@@ -2,7 +2,7 @@
 
 'use strict'
 
-const fs = require('fs')
+const { existsSync } = require('fs')
 const { program } = require('commander')
 const GoogleDriveCleaner = require('..')
 const separator =
@@ -21,7 +21,7 @@ if (!process.argv.slice(2).length) {
 }
 
 const opts = program.opts()
-if (!fs.existsSync(opts.auth)) {
+if (!existsSync(opts.auth)) {
   program.outputHelp()
   process.exit(254)
 }
