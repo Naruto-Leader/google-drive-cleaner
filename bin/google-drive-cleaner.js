@@ -15,11 +15,6 @@ program
   .option('--no-dryrun', 'Delete files')
   .parse(process.argv)
 
-if (!process.argv.slice(2).length) {
-  program.outputHelp()
-  process.exit(255)
-}
-
 const opts = program.opts()
 if (!existsSync(opts.auth)) {
   program.outputHelp()
