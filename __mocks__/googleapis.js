@@ -27,11 +27,11 @@ const driveObject = {
   files: {}
 }
 driveObject.files = {
-  list (_, callback) {
-    if (_.q === '__failed_test__') {
-      callback(new Error('files failed test'))
+  list (params, callback) {
+    if (params.q === '__failed_test__') {
+      return Promise.reject(new Error('files failed test'))
     }
-    callback(null, {
+    return Promise.resolve({
       data: {
         kind: 'drive#fileList',
         incompleteSearch: false,
@@ -50,16 +50,16 @@ driveObject.files = {
     })
   },
 
-  delete (_, callback) {
-    if (_.fileId === '__failed_test__') {
-      callback(new Error('delete failed test'))
+  delete (params) {
+    if (params.fileId === '__failed_test__') {
+      return Promise.reject(new Error('delete failed test'))
     }
-    callback(null)
+    return Promise.resolve()
   }
 }
 driveObject.about = {
-  get (_, callback) {
-    callback(null, {
+  get () {
+    return Promise.resolve({
       data: {
         storageQuota: {
           limit: '10',
