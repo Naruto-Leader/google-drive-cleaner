@@ -2,6 +2,7 @@
 
 'use strict'
 
+const process = require('process')
 const { existsSync } = require('fs')
 const { program } = require('commander')
 const GoogleDriveCleaner = require('..')
