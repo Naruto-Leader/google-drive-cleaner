@@ -10,7 +10,6 @@ const separator =
   require('full-width-of-terminal').getStringFullWidthOfTerminal
 
 program
-  .showSuggestionAfterError()
   .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-q, --query [QUERY]', 'Query string for searching delete files.', '')
   .option('--no-dryrun', 'Delete files')
