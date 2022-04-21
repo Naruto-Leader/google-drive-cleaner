@@ -19,7 +19,7 @@ class JWT {
     }
   }
 }
-googleapis.google.auth = { JWT: JWT }
+googleapis.google.auth = { JWT }
 
 // drive
 const driveObject = {
