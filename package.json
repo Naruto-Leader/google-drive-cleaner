@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^9.1.0",
     "full-width-of-terminal": "^2.1.0",
-    "googleapis": "^103.0.0"
+    "googleapis": "^104.0.0"
   },
   "files": [
     "LICENSE",
