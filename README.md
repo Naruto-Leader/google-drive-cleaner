@@ -27,7 +27,7 @@ Because it is dryrun, the file to be deleted is only displayed.
 
 ### query
 
-See [Search for Files and Team Drives](https://developers.google.com/drive/v3/web/search-parameters) for queries specified with `-q`.
+See [Search query terms and operators](https://developers.google.com/drive/api/guides/ref-search-terms) for queries specified with `-q`.
 
 ## delete
 
