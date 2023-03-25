@@ -33,7 +33,7 @@ const googleDriveCleaner = new GoogleDriveCleaner(opts.auth)
     const storageQuota = await googleDriveCleaner.storageQuota()
     const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
     const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
-    const storageSpaceUsage = storageQuota.usage / storageQuota.limit
+    const storageSpaceUsage = await googleDriveCleaner.storageSpaceUsage()
     console.log(`
 ${separator('=')}
  Current Storage Usage:
