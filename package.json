@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/abetomo/google-drive-cleaner#readme",
   "dependencies": {
-    "commander": "^10.0.0",
+    "commander": "^11.0.0",
     "full-width-of-terminal": "^2.1.0",
     "googleapis": "^118.0.0"
   },
