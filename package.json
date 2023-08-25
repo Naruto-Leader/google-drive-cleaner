@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^11.0.0",
     "full-width-of-terminal": "^2.1.0",
-    "googleapis": "^124.0.0"
+    "googleapis": "^126.0.0"
   },
   "files": [
     "LICENSE",
@@ -51,7 +51,7 @@
     "node": ">= 14.0.0"
   },
   "devDependencies": {
-    "jest": "^29.6.1",
+    "jest": "^29.6.3",
     "standard": "^17.1.0"
   }
 }
