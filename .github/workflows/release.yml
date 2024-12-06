@@ -14,7 +14,7 @@ jobs:
     - name: npm publish
       uses: actions/setup-node@v4
       with:
-        node-version: '20.x'
+        node-version: '22.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm i -g npm
     - run: npm ci
@@ -25,3 +25,8 @@ jobs:
 
     - name: Create Release
       uses: softprops/action-gh-release@v2
+
+    - name: Info
+      run: |
+        echo "${GITHUB_REF_TYPE}"
+        echo "${GITHUB_REF_NAME}"

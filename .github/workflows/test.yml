@@ -18,3 +18,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+
+    - name: Info
+      run: |
+        echo "${GITHUB_REF_TYPE}"
+        echo "${GITHUB_REF_NAME}"
