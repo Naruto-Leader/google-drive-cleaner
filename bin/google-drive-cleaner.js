@@ -28,8 +28,8 @@ const googleDriveCleaner = new GoogleDriveCleaner(opts.auth)
     await googleDriveCleaner.clean({
       query: opts.query,
       dryrun: opts.dryrun
-    })
-
+    })            
+                    
     const storageQuota = await googleDriveCleaner.storageQuota()
     const limit = googleDriveCleaner.bytesToSize(storageQuota.limit)
     const usage = googleDriveCleaner.bytesToSize(storageQuota.usage)
