@@ -51,7 +51,7 @@
     "node": ">= 14.0.0"
   },
   "devDependencies": {
-    "jest": "^29.6.3",
+    "jest": "^30.0.4",
     "standard": "^17.1.0"
   }
 }
